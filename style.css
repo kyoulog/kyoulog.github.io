@@ -378,5 +378,24 @@ h1 {
   .footer { font-size: 11px; }
   .footer .line { margin-bottom: 7px; }
   .footer-icons { margin-top: 6px; font-size: 15px; }
+
+  /* === Θ七：全デバイス左下固定・最終上書き === */
+.tena-peek {
+  left: 18px !important;
+  right: auto !important;
+  bottom: 25px !important;
+  transform: translateY(0) !important;
+}
+
+/* スマホだけ少し上へ */
+@media (max-width: 560px) {
+  .tena-peek {
+    left: 10px !important;
+    right: auto !important;
+    bottom: 45px !important;
+    width: 92px !important;
+  }
+}
+
 }
 
