@@ -270,8 +270,8 @@ h1 {
 
   .tena-peek {
     width: 92px;
-    right: 10px;
-    bottom: 40px;
+    right: -16px;
+    bottom: -8px;
   }
 
   .tena-peek:hover {
@@ -375,4 +375,62 @@ h1 {
   .footer { font-size: 11px; }
   .footer .line { margin-bottom: 7px; }
   .footer-icons { margin-top: 6px; font-size: 15px; }
+}
+
+
+/* v1.1 mobile position fix: place peek Tena slightly higher and inward on smartphones */
+@media (max-width: 560px) {
+  .tena-peek {
+    right: 0px !important;
+    bottom: 45px !important;
+    width: 92px !important;
+    transform: translateY(0) !important;
+  }
+
+  .tena-peek:hover {
+    transform: translateY(-3px) !important;
+  }
+}
+
+
+/* v1.2: place peek Tena at the bottom-left on all devices */
+.tena-peek {
+  left: 0px !important;
+  right: auto !important;
+  bottom: 25px !important;
+  transform: translateY(0) !important;
+}
+
+.tena-peek:hover {
+  transform: translateY(-3px) !important;
+}
+
+/* Smartphone: keep Tena a little higher so browser UI does not overlap */
+@media (max-width: 560px) {
+  .tena-peek {
+    left: 0px !important;
+    right: auto !important;
+    bottom: 45px !important;
+    width: 92px !important;
+    transform: translateY(0) !important;
+  }
+
+  .tena-peek:hover {
+    transform: translateY(-3px) !important;
+  }
+}
+
+/* Tablet / short-height screens: keep the same left-bottom position */
+@media (max-height: 760px) and (min-width: 700px) {
+  .tena-peek {
+    left: 0px !important;
+    right: auto !important;
+    bottom: 25px !important;
+    width: 126px !important;
+    transform: translateY(0) !important;
+  }
+
+  .tena-peek:hover {
+    transform: translateY(-3px) !important;
+  }
 }
