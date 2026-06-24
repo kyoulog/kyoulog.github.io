@@ -54,19 +54,19 @@ body::before {
   text-shadow: 0 2px 14px var(--shadow);
 }
 
-.hero { margin-bottom: 12px; }
+.hero { margin-bottom: 13px; }
 
 .brand-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  transform: translateX(-10px);
+  gap: 16px;
+  transform: translateX(-7px);
 }
 
 .logo-mark {
-  width: 94px;
-  height: 94px;
+  width: 90px;
+  height: 90px;
   flex: 0 0 auto;
   display: block;
   border-radius: 999px;
@@ -90,7 +90,7 @@ h1 {
 .title-main{display:block;font-size:1.38em;line-height:0.92;}
 
 .tagline {
-  margin: 6px 0 0;
+  margin: 10px 0 0;
   font-size: clamp(13px, 1.35vw, 17px);
   letter-spacing: 0.13em;
   color: var(--soft-white);
@@ -246,7 +246,37 @@ h1 {
 
 .sp-only { display: none; }
 
+
+
+.tena-peek {
+  position: fixed;
+  right: -18px;
+  bottom: -8px;
+  width: clamp(118px, 10vw, 168px);
+  height: auto;
+  z-index: 2;
+  pointer-events: auto;
+  filter: drop-shadow(0 0 18px rgba(82, 244, 255, 0.28)) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.5));
+  transform: translateY(8px);
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.tena-peek:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 0 24px rgba(82, 244, 255, 0.42)) drop-shadow(0 12px 28px rgba(0, 0, 0, 0.58));
+}
+
 @media (max-width: 560px) {
+
+  .tena-peek {
+    width: 92px;
+    right: -16px;
+    bottom: -8px;
+  }
+
+  .tena-peek:hover {
+    transform: translateY(-5px);
+  }
   body {
     background-position: center top;
     background-attachment: scroll;
@@ -264,7 +294,7 @@ h1 {
   }
 
   .brand-header {
-    gap: 8px;
+    gap: 10px;
     transform: translateX(-4px);
   }
 
@@ -315,10 +345,16 @@ h1 {
 }
 
 @media (max-height: 760px) and (min-width: 700px) {
+
+  .tena-peek {
+    width: 126px;
+    right: -16px;
+    bottom: -10px;
+  }
   .page { padding: 8px 18px; }
   .card { width: min(100%, 480px); padding: 12px 18px; }
-  .brand-header { gap: 10px; transform: translateX(-8px); }
-  .logo-mark { width: 76px; height: 76px; }
+  .brand-header { gap: 13px; transform: translateX(-6px); }
+  .logo-mark { width: 72px; height: 72px; }
   h1 { font-size: 34px; }
   
 .title-top{display:block;font-size:0.9em;}
